@@ -7,6 +7,7 @@
 
     <fragment
         android:id="@+id/bookListingFragment"
+        android:name="io.raveerocks.bookstore.listing.BookListingFragment"
         android:label="Books"
         tools:layout="@layout/fragment_book_listing" >
         <action
@@ -36,6 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
+        android:name="io.raveerocks.bookstore.login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -54,6 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
+        android:name="io.raveerocks.bookstore.instruction.InstructionFragment"
         android:label="Instructions"
         tools:layout="@layout/fragment_instruction" >
         <action
@@ -66,6 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/bookDetailFragment"
+        android:name="io.raveerocks.bookstore.detail.BookDetailFragment"
         android:label="New Book"
         tools:layout="@layout/fragment_book_detail" >
         <action
@@ -76,6 +80,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
+        android:name="io.raveerocks.bookstore.welcome.WelcomeFragment"
         android:label="Welcome"
         tools:layout="@layout/fragment_welcome" >
         <action

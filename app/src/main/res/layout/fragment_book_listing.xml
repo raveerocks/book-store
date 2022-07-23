@@ -5,14 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Data binding viewModel added -->
-    <data>
-
-        <variable
-            name="viewModel"
-            type="io.raveerocks.bookstore.ActivityViewModel" />
-    </data>
-
     <!-- Constraint Layout is holding the scroll view and FAB -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_constraint_layout"
