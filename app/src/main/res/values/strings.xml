@@ -1,4 +1,30 @@
 <resources>
-    <string name="app_name">BookStore</string>
-    <string name="hello_world">Hello World</string>
+    <string name="app_name">Book Store</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_book_store">Book Store</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_login">Login</string>
+    <string name="label_sign_up">Sign Up</string>
+    <string name="label_save">Save</string>
+    <string name="label_title">Title</string>
+    <string name="label_author">Author</string>
+    <string name="label_category">Category</string>
+    <string name="label_isbn">ISBN</string>
+    <string name="label_publisher">Publisher</string>
+    <string name="label_language">Language</string>
+    <string name="label_price">Price ($)</string>
+    <string name="label_rating">Rating</string>
+    <string name="welcome_para1">\t\t“A reader lives a thousand lives before he dies…The man who never reads lives only one” - George R. R. Martin</string>
+    <string name="welcome_para2">\t\tBookStore is your destination to find all your favorite books at one place. It lists down all the details you might need regarding the books such as auhor, ratings, category etc. Add more books into your collection now!</string>
+    <string name="welcome_para3">\t\tReading books is fun, it\'s even more, when you can share it with your friends. BookStore helps you collect all the details and share it with your friends. SignUp now, find more interesting facts about BookStore!</string>
+    <string name="instruction_para1">1.Use your email id and password to login to the application</string>
+    <string name="instruction_para2">2.When you will login for the first time you will see the welcome message and these instruction</string>
+    <string name="instruction_para3">3.Once logged in, you can view the list of all added books</string>
+    <string name="instruction_para4">4.Click on the + to add a new book, which will bring the detail screen</string>
+    <string name="instruction_para5">5.Click on SAVE once you add all the relevant details</string>
+    <string name="label_mark_as_read">Mark as Read</string>
+    <string name="label_add_new">Add New</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="menu_log_out">Log Out</string>
 </resources>

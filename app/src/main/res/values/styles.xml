@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="style_default_logo">
+        <item name="android:layout_marginBottom">@dimen/margin_medium</item>
+        <item name="android:fontFamily">@font/alex_brush</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/logo_medium</item>
+    </style>
+
+    <style name="style_long_field_label">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_Long_field_value_container" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_long_field_value">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_dark_button" parent="Widget.MaterialComponents.Button">
+        <item name="colorButtonNormal">?attr/colorPrimary</item>
+    </style>
+
+    <style name="style_light_button" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="colorButtonNormal">?attr/colorOnPrimary</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="style_medium_margin_wrapper">
+        <item name="android:layout_marginStart">@dimen/margin_medium</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/margin_medium</item>
+        <item name="android:layout_marginBottom">@dimen/margin_medium</item>
+    </style>
+
+    <style name="style_para">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/margin_medium</item>
+    </style>
+
+    <style name="style_fab_bottom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginEnd">@dimen/margin_medium</item>
+        <item name="android:layout_marginBottom">@dimen/margin_medium</item>
+    </style>
+
+    <style name="style_table_col">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+    <style name="style_table_title_col" parent="style_table_col">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:layout_weight">0.5</item>
+    </style>
+
+</resources>
