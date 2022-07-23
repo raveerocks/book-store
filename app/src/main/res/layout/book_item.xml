@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Data binding added -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Data binding for book item added -->
+    <data>
+
+        <variable
+            name="bookItem"
+            type="io.raveerocks.bookstore.BookItem" />
+    </data>
+
+    <!-- Constraint Layout is holding the BookItemCard -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- MaterialCardView is a container for the book item details -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/book_item_card"
+            style="@style/style_medium_margin_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="@dimen/radius_small"
+            app:cardElevation="@dimen/elevation_small"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="?colorPrimary"
+            app:strokeWidth="@dimen/stroke_small">
+
+            <!-- Container layout -->
+            <LinearLayout
+                android:id="@+id/container_linear_layout"
+                style="@style/style_medium_margin_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Logo added for branding -->
+                <ImageView
+                    android:id="@+id/brand_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_baseline_menu_book_200"
+                    android:contentDescription="@string/label_book_store" />
+
+                <!-- Title field -->
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{bookItem.title}"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <!-- Rating bar -->
+                <RatingBar
+                    android:id="@+id/rating_bar"
+                    style="@style/style_table_col"
+                    android:layout_gravity="center"
+                    android:isIndicator="true"
+                    android:rating="@{bookItem.formattedRate}" />
+
+                <!-- Container  table layout -->
+                <TableLayout
+                    android:id="@+id/container_table_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Table row for author  -->
+                    <TableRow
+                        android:id="@+id/author_table_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/author_text"
+                            style="@style/style_table_title_col"
+                            android:text="@string/label_author" />
+
+                        <TextView
+                            android:id="@+id/author_value_text"
+                            style="@style/style_table_col"
+                            android:text="@{bookItem.author}" />
+                    </TableRow>
+
+                    <!-- Table row for category  -->
+                    <TableRow
+                        android:id="@+id/category_table_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/category_text"
+                            style="@style/style_table_title_col"
+                            android:text="@string/label_category" />
+
+                        <TextView
+                            android:id="@+id/category_value_text"
+                            style="@style/style_table_col"
+                            android:text="@{bookItem.category}" />
+                    </TableRow>
+
+                    <!-- Table row for isbn  -->
+                    <TableRow
+                        android:id="@+id/isbn_table_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/isbn_text"
+                            style="@style/style_table_title_col"
+                            android:text="@string/label_isbn" />
+
+                        <TextView
+                            android:id="@+id/isbn_value_text"
+                            style="@style/style_table_col"
+                            android:text="@{bookItem.isbn}" />
+                    </TableRow>
+
+                    <!-- Table row for publisher  -->
+                    <TableRow
+                        android:id="@+id/publisher_table_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/publisher_text"
+                            style="@style/style_table_title_col"
+                            android:text="@string/label_publisher" />
+
+                        <TextView
+                            android:id="@+id/publisher_value_text"
+                            style="@style/style_table_col"
+                            android:text="@{bookItem.publisher}" />
+                    </TableRow>
+
+                    <!-- Table row for language  -->
+                    <TableRow
+                        android:id="@+id/language_table_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/language_text"
+                            style="@style/style_table_title_col"
+                            android:text="@string/label_language" />
+
+                        <TextView
+                            android:id="@+id/language_value_text"
+                            style="@style/style_table_col"
+                            android:text="@{bookItem.language}" />
+                    </TableRow>
+
+                    <!-- Table row for price  -->
+                    <TableRow
+                        android:id="@+id/price_table_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/price_text"
+                            style="@style/style_table_title_col"
+                            android:text="@string/label_price" />
+
+                        <TextView
+                            android:id="@+id/price_value_text"
+                            style="@style/style_table_col"
+                            android:text="@{bookItem.formattedPrice()}" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

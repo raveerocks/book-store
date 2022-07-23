@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Data binding added -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Scroll View Added for screen size overflow -->
+    <ScrollView
+        android:id="@+id/container_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".detail.BookDetailFragment">
+
+        <!-- Linear Layout is holding the  form -->
+        <LinearLayout
+            android:id="@+id/login_form_layout"
+            style="@style/style_medium_margin_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title label -->
+            <TextView
+                android:id="@+id/title_text"
+                style="@style/style_long_field_label"
+                android:text="@string/label_title" />
+
+            <!-- Title field container -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_text_container"
+                style="@style/style_Long_field_value_container"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                <!-- Title field -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/title_edit_text"
+                    style="@style/style_long_field_value" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Author label -->
+            <TextView
+                android:id="@+id/author_text"
+                style="@style/style_long_field_label"
+                android:text="@string/label_author" />
+
+            <!-- Author field container -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/author_text_container"
+                style="@style/style_Long_field_value_container"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                <!-- Author field -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/author_edit_text"
+                    style="@style/style_long_field_value" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Category label -->
+            <TextView
+                android:id="@+id/category_text"
+                style="@style/style_long_field_label"
+                android:text="@string/label_category" />
+
+            <!-- Category field container -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/category_text_container"
+                style="@style/style_Long_field_value_container"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                <!-- Category field -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/category_edit_text"
+                    style="@style/style_long_field_value" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ISBN label -->
+            <TextView
+                android:id="@+id/isbn_text"
+                style="@style/style_long_field_label"
+                android:text="@string/label_isbn" />
+
+            <!-- ISBN field container -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/isbn_text_container"
+                style="@style/style_Long_field_value_container"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                <!-- ISBN field -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/isbn_edit_text"
+                    style="@style/style_long_field_value" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Publisher label -->
+            <TextView
+                android:id="@+id/publisher_text"
+                style="@style/style_long_field_label"
+                android:text="@string/label_publisher" />
+
+            <!-- Publisher field container -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/publisher_text_container"
+                style="@style/style_Long_field_value_container"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                <!-- Publisher field -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/publisher_edit_text"
+                    style="@style/style_long_field_value" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Language label -->
+            <TextView
+                android:id="@+id/language_text"
+                style="@style/style_long_field_label"
+                android:text="@string/label_language" />
+
+            <!-- Language field container -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/language_text_container"
+                style="@style/style_Long_field_value_container"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                <!-- Language field -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/language_edit_text"
+                    style="@style/style_long_field_value" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Price label -->
+            <TextView
+                android:id="@+id/price_text"
+                style="@style/style_long_field_label"
+                android:text="@string/label_price" />
+
+            <!-- Price field container -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/price_text_container"
+                style="@style/style_Long_field_value_container"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                <!-- Price field -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/price_edit_text"
+                    style="@style/style_long_field_value" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Rating label -->
+            <TextView
+                android:id="@+id/rating_text"
+                style="@style/style_long_field_label"
+                android:text="@string/label_rating" />
+
+            <!-- Rating bar -->
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium" />
+
+            <!-- Save button -->
+            <Button
+                android:id="@+id/save_button"
+                style="@style/style_dark_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:text="@string/label_save" />
+
+            <!-- Cancel button -->
+            <Button
+                android:id="@+id/cancel_button"
+                style="@style/style_light_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:text="@string/label_cancel"
+                app:strokeColor="?attr/colorPrimary" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

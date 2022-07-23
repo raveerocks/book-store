@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Data binding added -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Scroll View Added for screen size overflow -->
+    <ScrollView
+        android:id="@+id/container_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".login.LoginFragment">
+
+        <!-- Constraint Layout is holding the login form -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- App Logo Added -->
+            <TextView
+                android:id="@+id/brand_logo_text"
+                style="@style/style_default_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_book_store"
+                app:drawableTopCompat="@drawable/ic_baseline_menu_book_200"
+                app:layout_constraintBottom_toTopOf="@+id/login_form_layout" />
+
+            <!-- Login form -->
+            <LinearLayout
+                android:id="@+id/login_form_layout"
+                style="@style/style_medium_margin_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Email label -->
+                <TextView
+                    android:id="@+id/email_label_text"
+                    style="@style/style_long_field_label"
+                    android:labelFor="@id/email_edit_text"
+                    android:text="@string/label_email" />
+
+                <!-- Email field container -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_edit_text_container"
+                    style="@style/style_Long_field_value_container"
+                    app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                    app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                    app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                    app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                    <!-- Email field -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_edit_text"
+                        style="@style/style_long_field_value"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password label -->
+                <TextView
+                    android:id="@+id/password_label_text"
+                    style="@style/style_long_field_label"
+                    android:labelFor="@id/password_edit_text"
+                    android:text="@string/label_password" />
+
+                <!-- Password field container -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_edit_text_container"
+                    style="@style/style_Long_field_value_container"
+                    app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                    app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                    app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                    app:boxCornerRadiusTopStart="@dimen/radius_small">
+
+                    <!-- Password field -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password_edit_text"
+                        style="@style/style_long_field_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Login button -->
+                <Button
+                    android:id="@+id/login_button"
+                    style="@style/style_dark_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:text="@string/label_login" />
+
+                <!-- Sign Up button -->
+                <Button
+                    android:id="@+id/sign_up_button"
+                    style="@style/style_light_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_sign_up"
+                    app:strokeColor="?attr/colorPrimary" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
