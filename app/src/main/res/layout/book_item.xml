@@ -54,7 +54,7 @@
                     android:id="@+id/title_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{bookItem.title}"
+                    android:text="@={bookItem.title}"
                     android:textAlignment="center"
                     android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -64,7 +64,7 @@
                     style="@style/style_table_col"
                     android:layout_gravity="center"
                     android:isIndicator="true"
-                    android:rating="@{bookItem.formattedRate}" />
+                    android:rating="@={bookItem.rating}" />
 
                 <!-- Container  table layout -->
                 <TableLayout
@@ -86,7 +86,7 @@
                         <TextView
                             android:id="@+id/author_value_text"
                             style="@style/style_table_col"
-                            android:text="@{bookItem.author}" />
+                            android:text="@={bookItem.author}" />
                     </TableRow>
 
                     <!-- Table row for category  -->
@@ -103,7 +103,7 @@
                         <TextView
                             android:id="@+id/category_value_text"
                             style="@style/style_table_col"
-                            android:text="@{bookItem.category}" />
+                            android:text="@={bookItem.category}" />
                     </TableRow>
 
                     <!-- Table row for isbn  -->
@@ -120,7 +120,7 @@
                         <TextView
                             android:id="@+id/isbn_value_text"
                             style="@style/style_table_col"
-                            android:text="@{bookItem.isbn}" />
+                            android:text="@={bookItem.isbn}" />
                     </TableRow>
 
                     <!-- Table row for publisher  -->
@@ -137,7 +137,7 @@
                         <TextView
                             android:id="@+id/publisher_value_text"
                             style="@style/style_table_col"
-                            android:text="@{bookItem.publisher}" />
+                            android:text="@={bookItem.publisher}" />
                     </TableRow>
 
                     <!-- Table row for language  -->
@@ -154,7 +154,7 @@
                         <TextView
                             android:id="@+id/language_value_text"
                             style="@style/style_table_col"
-                            android:text="@{bookItem.language}" />
+                            android:text="@={bookItem.language}" />
                     </TableRow>
 
                     <!-- Table row for price  -->
@@ -171,7 +171,7 @@
                         <TextView
                             android:id="@+id/price_value_text"
                             style="@style/style_table_col"
-                            android:text="@{bookItem.formattedPrice()}" />
+                            android:text="@={bookItem.price}" />
                     </TableRow>
                 </TableLayout>
             </LinearLayout>

@@ -5,6 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Data binding for book item added -->
+    <data>
+
+        <variable
+            name="bookItem"
+            type="io.raveerocks.bookstore.BookItem" />
+    </data>
+
     <!-- Scroll View Added for screen size overflow -->
     <ScrollView
         android:id="@+id/container_scroll_view"
@@ -38,7 +46,8 @@
                 <!-- Title field -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/title_edit_text"
-                    style="@style/style_long_field_value" />
+                    style="@style/style_long_field_value"
+                    android:text="@={bookItem.title}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Author label -->
@@ -59,7 +68,8 @@
                 <!-- Author field -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/author_edit_text"
-                    style="@style/style_long_field_value" />
+                    style="@style/style_long_field_value"
+                    android:text="@={bookItem.author}"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -81,7 +91,8 @@
                 <!-- Category field -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/category_edit_text"
-                    style="@style/style_long_field_value" />
+                    style="@style/style_long_field_value"
+                    android:text="@={bookItem.category}"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- ISBN label -->
@@ -102,7 +113,8 @@
                 <!-- ISBN field -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/isbn_edit_text"
-                    style="@style/style_long_field_value" />
+                    style="@style/style_long_field_value"
+                    android:text="@={bookItem.isbn}"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -124,7 +136,8 @@
                 <!-- Publisher field -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/publisher_edit_text"
-                    style="@style/style_long_field_value" />
+                    style="@style/style_long_field_value"
+                    android:text="@={bookItem.publisher}"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Language label -->
@@ -145,7 +158,8 @@
                 <!-- Language field -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/language_edit_text"
-                    style="@style/style_long_field_value" />
+                    style="@style/style_long_field_value"
+                    android:text="@={bookItem.language}"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -167,7 +181,8 @@
                 <!-- Price field -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/price_edit_text"
-                    style="@style/style_long_field_value" />
+                    style="@style/style_long_field_value"
+                    android:text="@={bookItem.price}"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Rating label -->
@@ -181,7 +196,8 @@
                 android:id="@+id/rating_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_medium" />
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:rating="@={bookItem.rating}"/>
 
             <!-- Save button -->
             <Button

@@ -30,7 +30,6 @@ class BookListingFragment : Fragment() {
         activityViewModel = ViewModelProvider(requireActivity())[ActivityViewModel::class.java]
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_book_listing, container, false)
-     //   binding.viewModel = activityViewModel
         activityViewModel.bookItems.observe(viewLifecycleOwner) {
             for (bookItem in activityViewModel.bookItems.value!!) {
                 val bookItemBinding = BookItemBinding.inflate(layoutInflater)

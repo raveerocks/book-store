@@ -4,24 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import timber.log.Timber
-import java.io.Serializable
 
-
-data class BookItem(
-    val title: String,
-    val author: String,
-    val category: String,
-    val isbn: String,
-    val publisher: String,
-    val language: String,
-    val price: Double,
-    val rating: Double,
-) : Serializable {
-
-    fun formattedPrice() = "$$price"
-    fun formattedRate() = rating.toFloat()
-
-}
 
 enum class AppState {
     LOGIN_NOT_DONE, LOGIN_DONE, WELCOME_DONE, INSTRUCTION_DONE, LOG_OUT_DONE

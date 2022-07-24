@@ -28,6 +28,7 @@ class BookDetailFragment : Fragment() {
     ): View {
         activityViewModel = ViewModelProvider(requireActivity())[ActivityViewModel::class.java]
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_book_detail, container, false)
+        binding.bookItem = BookItem()
         binding.saveButton.setOnClickListener (this::onSaveClicked)
         binding.cancelButton.setOnClickListener(this::onCancelClicked)
         return binding.root
@@ -55,40 +56,29 @@ class BookDetailFragment : Fragment() {
 
     private fun validate():Status{
         var status = Status(true,"")
-        if(binding.titleEditText.text.toString().isEmpty()){
+        val bookItem = binding.bookItem!!
+        if(bookItem.title.value!!.isEmpty()){
             status = Status(false,"Title cannot be empty.")
-        }else if(binding.authorEditText.text.toString().isEmpty()){
+        }else if(bookItem.author.value!!.isEmpty()){
             status = Status(false,"Author cannot be empty.")
-        }else if(binding.categoryEditText.text.toString().isEmpty()){
+        }else if(bookItem.category.value!!.isEmpty()){
             status = Status(false,"Category cannot be empty.")
-        }else if(binding.isbnEditText.text.toString().isEmpty()){
+        }else if(bookItem.isbn.value!!.isEmpty()){
             status = Status(false,"ISBN cannot be empty.")
-        }else if(binding.publisherEditText.text.toString().isEmpty()){
+        }else if(bookItem.publisher.value!!.isEmpty()){
             status = Status(false,"Publisher cannot be empty.")
-        }else if(binding.languageEditText.text.toString().isEmpty()){
+        }else if(bookItem.language.value!!.isEmpty()){
             status = Status(false,"Language cannot be empty.")
-        }else if(binding.priceEditText.text.toString().isEmpty()){
+        }else if(bookItem.price.value!!.isEmpty()){
             status = Status(false,"Price cannot be empty.")
-        }else if(binding.priceEditText.text.toString().toDoubleOrNull()==null){
+        }else if(bookItem.price.value!!.toDoubleOrNull()==null){
             status = Status(false,"Invalid price entered.")
         }
         return status
     }
 
     private fun saveBookItem() {
-        activityViewModel.addBook(
-            BookItem(
-                binding.titleEditText.text.toString(),
-                binding.authorEditText.text.toString(),
-                binding.categoryEditText.text.toString(),
-                binding.isbnEditText.text.toString(),
-                binding.publisherEditText.text.toString(),
-                binding.languageEditText.text.toString(),
-                binding.priceEditText.text.toString().toDouble(),
-                binding.ratingBar.rating.toDouble(),
-            )
-        )
-
+        activityViewModel.addBook(binding.bookItem!!)
     }
 
     private fun redirect(view: View) {
